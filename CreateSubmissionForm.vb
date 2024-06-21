@@ -25,6 +25,7 @@ Public Class CreateSubmissionForm
         If response.IsSuccessStatusCode Then
             MessageBox.Show("Submission Saved Successfully")
             Form1.Show()
+            Me.Close()
         Else
             Dim errorMessage As String = Await response.Content.ReadAsStringAsync()
             MessageBox.Show("Error Saving Submission: " & errorMessage)

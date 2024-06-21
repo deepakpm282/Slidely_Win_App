@@ -6,11 +6,12 @@ Public Class ViewSubmissionForms
 
     Private submissions As List(Of Submission)
     Private CurrIndex As Integer = 0
+    Private total As Integer
 
     Public Sub New()
         InitializeComponent()
-        ' Fetch the first submission initially
         FetchSubmission(CurrIndex)
+        GetTotalSubs()
     End Sub
 
     Private Async Function GetData(email As String) As Task
@@ -40,6 +41,13 @@ Public Class ViewSubmissionForms
         End If
     End Sub
 
+    Private Async Sub GetTotalSubs()
+        Dim Client As New HttpClient()
+        Dim response As HttpResponseMessage = Await Client.GetAsync("http://localhost:7000/routes/get-length")
+        Dim totalAsString As String = Await response.Content.ReadAsStringAsync()
+        Integer.TryParse(totalAsString, total)
+    End Sub
+
     Private Sub DisplaySubmission(submission As Submission)
         If submission IsNot Nothing Then
             TBName.Text = submission.name
@@ -63,7 +71,7 @@ Public Class ViewSubmissionForms
 
     Private Sub btnNextSubmission_Click(sender As Object, e As EventArgs) Handles btnNextSubmission.Click
 
-        Dim totalSubmissions = 10
+        Dim totalSubmissions = total
         If CurrIndex < totalSubmissions - 1 Then
             CurrIndex += 1
             FetchSubmission(CurrIndex)
