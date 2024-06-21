@@ -42,7 +42,7 @@ Partial Class ViewSubmissionForms
         topLabel.AutoSize = True
         topLabel.Font = New Font("Microsoft Sans Serif", 11.0769234F, FontStyle.Regular, GraphicsUnit.Point)
         topLabel.ForeColor = Color.DimGray
-        topLabel.Location = New Point(193, 54)
+        topLabel.Location = New Point(185, 76)
         topLabel.Name = "topLabel"
         topLabel.Size = New Size(423, 25)
         topLabel.TabIndex = 0
@@ -53,7 +53,7 @@ Partial Class ViewSubmissionForms
         txtName.AutoSize = True
         txtName.Font = New Font("Microsoft Sans Serif", 11.0769234F, FontStyle.Regular, GraphicsUnit.Point)
         txtName.ForeColor = Color.DimGray
-        txtName.Location = New Point(218, 116)
+        txtName.Location = New Point(210, 138)
         txtName.Name = "txtName"
         txtName.Size = New Size(64, 25)
         txtName.TabIndex = 1
@@ -65,7 +65,7 @@ Partial Class ViewSubmissionForms
         TBName.BorderStyle = BorderStyle.FixedSingle
         TBName.Font = New Font("Microsoft Sans Serif", 8.969231F, FontStyle.Regular, GraphicsUnit.Point)
         TBName.ForeColor = SystemColors.WindowFrame
-        TBName.Location = New Point(314, 116)
+        TBName.Location = New Point(306, 138)
         TBName.Name = "TBName"
         TBName.ReadOnly = True
         TBName.Size = New Size(292, 26)
@@ -77,7 +77,7 @@ Partial Class ViewSubmissionForms
         txtEmail.AutoSize = True
         txtEmail.Font = New Font("Microsoft Sans Serif", 11.0769234F, FontStyle.Regular, GraphicsUnit.Point)
         txtEmail.ForeColor = Color.DimGray
-        txtEmail.Location = New Point(220, 169)
+        txtEmail.Location = New Point(212, 191)
         txtEmail.Name = "txtEmail"
         txtEmail.Size = New Size(60, 25)
         txtEmail.TabIndex = 3
@@ -89,7 +89,7 @@ Partial Class ViewSubmissionForms
         TBEmail.BorderStyle = BorderStyle.FixedSingle
         TBEmail.Font = New Font("Microsoft Sans Serif", 8.969231F, FontStyle.Regular, GraphicsUnit.Point)
         TBEmail.ForeColor = SystemColors.WindowFrame
-        TBEmail.Location = New Point(314, 169)
+        TBEmail.Location = New Point(306, 191)
         TBEmail.Name = "TBEmail"
         TBEmail.ReadOnly = True
         TBEmail.Size = New Size(292, 26)
@@ -101,7 +101,7 @@ Partial Class ViewSubmissionForms
         txtPhoneNum.AutoSize = True
         txtPhoneNum.Font = New Font("Microsoft Sans Serif", 11.0769234F, FontStyle.Regular, GraphicsUnit.Point)
         txtPhoneNum.ForeColor = Color.DimGray
-        txtPhoneNum.Location = New Point(193, 235)
+        txtPhoneNum.Location = New Point(185, 257)
         txtPhoneNum.Name = "txtPhoneNum"
         txtPhoneNum.Size = New Size(115, 25)
         txtPhoneNum.TabIndex = 5
@@ -113,7 +113,7 @@ Partial Class ViewSubmissionForms
         TBGithubLink.BorderStyle = BorderStyle.FixedSingle
         TBGithubLink.Font = New Font("Microsoft Sans Serif", 8.969231F, FontStyle.Regular, GraphicsUnit.Point)
         TBGithubLink.ForeColor = SystemColors.WindowFrame
-        TBGithubLink.Location = New Point(314, 292)
+        TBGithubLink.Location = New Point(306, 314)
         TBGithubLink.Multiline = True
         TBGithubLink.Name = "TBGithubLink"
         TBGithubLink.ReadOnly = True
@@ -127,7 +127,7 @@ Partial Class ViewSubmissionForms
         TBPhoneNum.BorderStyle = BorderStyle.FixedSingle
         TBPhoneNum.Font = New Font("Microsoft Sans Serif", 8.969231F, FontStyle.Regular, GraphicsUnit.Point)
         TBPhoneNum.ForeColor = SystemColors.WindowFrame
-        TBPhoneNum.Location = New Point(314, 231)
+        TBPhoneNum.Location = New Point(306, 253)
         TBPhoneNum.Name = "TBPhoneNum"
         TBPhoneNum.ReadOnly = True
         TBPhoneNum.Size = New Size(292, 26)
@@ -139,7 +139,7 @@ Partial Class ViewSubmissionForms
         txtGitHubLink.AutoSize = True
         txtGitHubLink.Font = New Font("Microsoft Sans Serif", 11.0769234F, FontStyle.Regular, GraphicsUnit.Point)
         txtGitHubLink.ForeColor = Color.DimGray
-        txtGitHubLink.Location = New Point(193, 296)
+        txtGitHubLink.Location = New Point(185, 318)
         txtGitHubLink.Name = "txtGitHubLink"
         txtGitHubLink.Size = New Size(113, 50)
         txtGitHubLink.TabIndex = 8
@@ -150,7 +150,7 @@ Partial Class ViewSubmissionForms
         txtStopWatch.AutoSize = True
         txtStopWatch.Font = New Font("Microsoft Sans Serif", 11.0769234F, FontStyle.Regular, GraphicsUnit.Point)
         txtStopWatch.ForeColor = Color.DimGray
-        txtStopWatch.Location = New Point(193, 371)
+        txtStopWatch.Location = New Point(185, 393)
         txtStopWatch.Name = "txtStopWatch"
         txtStopWatch.Size = New Size(110, 50)
         txtStopWatch.TabIndex = 9
@@ -163,7 +163,7 @@ Partial Class ViewSubmissionForms
         TBStopWatch.BorderStyle = BorderStyle.FixedSingle
         TBStopWatch.Font = New Font("Microsoft Sans Serif", 8.969231F, FontStyle.Regular, GraphicsUnit.Point)
         TBStopWatch.ForeColor = SystemColors.WindowFrame
-        TBStopWatch.Location = New Point(314, 385)
+        TBStopWatch.Location = New Point(306, 407)
         TBStopWatch.Name = "TBStopWatch"
         TBStopWatch.ReadOnly = True
         TBStopWatch.Size = New Size(292, 26)
@@ -174,7 +174,7 @@ Partial Class ViewSubmissionForms
         ' 
         btnPreviousSubmission.BackColor = Color.Khaki
         btnPreviousSubmission.Font = New Font("Microsoft Sans Serif", 10.0769234F, FontStyle.Regular, GraphicsUnit.Point)
-        btnPreviousSubmission.Location = New Point(193, 450)
+        btnPreviousSubmission.Location = New Point(185, 472)
         btnPreviousSubmission.Name = "btnPreviousSubmission"
         btnPreviousSubmission.Size = New Size(200, 31)
         btnPreviousSubmission.TabIndex = 11
@@ -186,7 +186,7 @@ Partial Class ViewSubmissionForms
         ' 
         btnNextSubmission.BackColor = Color.SkyBlue
         btnNextSubmission.Font = New Font("Microsoft Sans Serif", 9.969231F, FontStyle.Regular, GraphicsUnit.Point)
-        btnNextSubmission.Location = New Point(406, 450)
+        btnNextSubmission.Location = New Point(398, 472)
         btnNextSubmission.Name = "btnNextSubmission"
         btnNextSubmission.Size = New Size(200, 31)
         btnNextSubmission.TabIndex = 12
@@ -197,7 +197,7 @@ Partial Class ViewSubmissionForms
         ' 
         AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 572)
+        ClientSize = New Size(781, 636)
         Controls.Add(btnNextSubmission)
         Controls.Add(btnPreviousSubmission)
         Controls.Add(TBStopWatch)

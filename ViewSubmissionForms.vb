@@ -8,46 +8,48 @@ Public Class ViewSubmissionForms
 
     Public Sub New()
         InitializeComponent()
-        FetchSubmissions()
+        ' Fetch the first submission initially
+        FetchSubmission(CurrIndex)
     End Sub
 
-    Private Async Sub FetchSubmissions()
+    Private Async Sub FetchSubmission(index As Integer)
         Dim Client As New HttpClient()
-        Dim response As HttpResponseMessage = Await Client.GetAsync("http://localhost:7000/routes/read")
+        Dim response As HttpResponseMessage = Await Client.GetAsync($"http://localhost:7000/routes/read?index={index}")
 
         If response.IsSuccessStatusCode Then
             Dim json As String = Await response.Content.ReadAsStringAsync()
-            submissions = JsonConvert.DeserializeObject(Of List(Of Submission))(json)
-            DisplaySubmission(CurrIndex)
+            Dim submission As Submission = JsonConvert.DeserializeObject(Of Submission)(json)
+            DisplaySubmission(submission)
+        Else
+            MessageBox.Show("Error fetching submission")
         End If
     End Sub
 
-    Private Sub DisplaySubmission(index As Integer)
-        If submissions IsNot Nothing AndAlso submissions.Count > 0 AndAlso index >= 0 AndAlso index < submissions.Count Then
-            Dim submission As Submission = submissions(index)
+    Private Sub DisplaySubmission(submission As Submission)
+        If submission IsNot Nothing Then
             TBName.Text = submission.name
             TBEmail.Text = submission.email
             TBPhoneNum.Text = submission.phone
             TBGithubLink.Text = submission.github_link
             TBStopWatch.Text = submission.stop_watch
         Else
-            MessageBox.Show("Submissions Not Found")
+            MessageBox.Show("Submission not found")
         End If
     End Sub
 
     Private Sub btnPreviousSubmission_Click(sender As Object, e As EventArgs) Handles btnPreviousSubmission.Click
         If CurrIndex > 0 Then
             CurrIndex -= 1
-            DisplaySubmission(CurrIndex)
+            FetchSubmission(CurrIndex)
         Else
-            MessageBox.Show("No Previuos Submission")
+            MessageBox.Show("No previous submission")
         End If
     End Sub
 
     Private Sub btnNextSubmission_Click(sender As Object, e As EventArgs) Handles btnNextSubmission.Click
         If submissions IsNot Nothing AndAlso CurrIndex < submissions.Count - 1 Then
             CurrIndex += 1
-            DisplaySubmission(CurrIndex)
+            FetchSubmission(CurrIndex)
         Else
             MessageBox.Show("No more submissions")
         End If
