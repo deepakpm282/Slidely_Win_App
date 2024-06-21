@@ -12,6 +12,16 @@ Public Class ViewSubmissionForms
         InitializeComponent()
         FetchSubmission(CurrIndex)
         GetTotalSubs()
+        Me.KeyPreview = True
+    End Sub
+
+    Protected Overrides Sub OnKeyDown(e As KeyEventArgs)
+        MyBase.OnKeyDown(e)
+        If e.Control AndAlso e.KeyCode = Keys.P Then
+            btnPreviousSubmission.PerformClick()
+        ElseIf e.Control AndAlso e.KeyCode = Keys.N Then
+            btnNextSubmission.PerformClick()
+        End If
     End Sub
 
     Private Async Function GetData(email As String) As Task

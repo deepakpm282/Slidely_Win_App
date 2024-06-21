@@ -1,5 +1,15 @@
 ﻿Public Class Form1
 
+    Public Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        Me.KeyPreview = True
+
+    End Sub
+
     Private Sub Form1_Key_Down(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
         If e.Control AndAlso e.KeyCode = Keys.V Then
             btnViewSubmission.PerformClick()
