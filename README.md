@@ -17,7 +17,9 @@ Slidely Submission Viewer is a Windows Forms application that allows users to su
 
 ## Setup
 
---**After cloning double click on the "Slidely_Win_App.sln" file**
+### Clone
+-- command: git clone https://github.com/deepakpm282/Slidely_Win_App.git
+-- **After cloning double click on the "Slidely_Win_App.sln" file**
 
 ### Backend
 
