@@ -17,6 +17,10 @@ Slidely Submission Viewer is a Windows Forms application that allows users to su
 
 ## Setup
 
+### Clone
+ - command: `git clone https://github.com/deepakpm282/Slidely_Win_App.git`
+ - **After cloning double click on the "Slidely_Win_App.sln" file**
+
 ### Backend
 
 1. **Navigate to the backend directory:**
@@ -89,6 +93,12 @@ Slidely Submission Viewer is a Windows Forms application that allows users to su
 - **Parameters:**
     - `email`: String (query parameter)
 - **Response:** A JSON object representing the submission.
+
+### `/get-total`
+
+- **Method:** GET
+- **Description:** Retrieve total submissions.
+- **Response:** A JSON object representing the number.
 
 ## Application Usage
 
