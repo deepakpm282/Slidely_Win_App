@@ -6,6 +6,20 @@ Imports Newtonsoft.Json
 
 Public Class CreateSubmissionForm
 
+    Public Sub New()
+        InitializeComponent()
+        Me.KeyPreview = True
+    End Sub
+
+    Protected Overrides Sub OnKeyDown(e As KeyEventArgs)
+        MyBase.OnKeyDown(e)
+        If e.Control AndAlso e.KeyCode = Keys.S Then
+            btnSubmit.PerformClick()
+        ElseIf e.Control AndAlso e.KeyCode = Keys.T Then
+            btnToggleStopWatch.PerformClick()
+        End If
+    End Sub
+
     Dim ss, tt, vv As Integer
 
     Private Async Function SubmitData(name As String, email As String, phone As String, github_link As String, stop_watch As String) As Task
