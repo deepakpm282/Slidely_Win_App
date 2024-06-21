@@ -90,6 +90,12 @@ Slidely Submission Viewer is a Windows Forms application that allows users to su
     - `email`: String (query parameter)
 - **Response:** A JSON object representing the submission.
 
+### `/get-total`
+
+- **Method:** GET
+- **Description:** Retrieve total submissions.
+- **Response:** A JSON object representing the number.
+
 ## Application Usage
 
 1. **Submitting Data:**
