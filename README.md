@@ -38,7 +38,7 @@ Slidely Submission Viewer is a Windows Forms application that allows users to su
 
 4. **Start the server:**
     ```bash
-    npm start
+    npm run dev
     ```
 
     The server will run on `http://localhost:7000`.
