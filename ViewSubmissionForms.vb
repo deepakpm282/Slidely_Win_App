@@ -47,16 +47,19 @@ Public Class ViewSubmissionForms
     End Sub
 
     Private Sub btnNextSubmission_Click(sender As Object, e As EventArgs) Handles btnNextSubmission.Click
-        If submissions IsNot Nothing AndAlso CurrIndex < submissions.Count - 1 Then
+
+        Dim totalSubmissions As Integer = 10
+        If CurrIndex < totalSubmissions - 1 Then
             CurrIndex += 1
             FetchSubmission(CurrIndex)
         Else
-            MessageBox.Show("No more submissions")
+            MessageBox.Show("No More Submissions")
         End If
     End Sub
 End Class
 
 Public Class Submission
+    Public Property id As Integer
     Public Property name As String
     Public Property email As String
     Public Property phone As String
